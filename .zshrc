@@ -25,4 +25,4 @@ SAVEHIST=3000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-[ -f /usr/local/bin/neofetch ] && clear && neofetch
+[ -f /usr/local/bin/neofetch ] || [ -f /usr/bin/neofetch ]  && clear && neofetch
