@@ -1,3 +1,7 @@
+# Prompt and colours
+autoload -U colors && colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[cyan]%}%M %{$fg[white]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored
@@ -12,11 +16,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # ~/.aliases, instead of adding them here directly.
-# if [ -f ~/.aliases ]; then
-source ~/.aliases
+[ -f ~/.aliases ] && source ~/.aliases
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=3000
 SAVEHIST=3000
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
+[ -f /usr/local/bin/neofetch ] && clear && neofetch
