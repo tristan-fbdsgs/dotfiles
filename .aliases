@@ -1,3 +1,0 @@
-alias ls="ls -F"
-alias lsa="ls -AF"
-alias lsl="ls -AlF"
